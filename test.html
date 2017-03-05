@@ -1,0 +1,38 @@
+
+
+<html>
+    <head>
+
+    </head>
+    <body>
+        <code class="hljs processing"><span class="hljs-keyword">public</span> class Solution {
+            <span class="hljs-keyword">public</span> List&lt;<span class="hljs-keyword">String</span>&gt; fizzBuzz(<span class="hljs-built_in">int</span> n) {
+                List&lt;<span class="hljs-keyword">String</span>&gt; ret = <span class="hljs-keyword">new</span> ArrayList&lt;<span class="hljs-keyword">String</span>&gt;(n);
+                <span class="hljs-keyword">for</span>(<span class="hljs-built_in">int</span> i=<span class="hljs-number">1</span>,fizz=<span class="hljs-number">0</span>,buzz=<span class="hljs-number">0</span>;i&lt;=n ;i++){
+                    fizz++;
+                    buzz++;
+                    <span class="hljs-keyword">if</span>(fizz==<span class="hljs-number">3</span> &amp;&amp; buzz==<span class="hljs-number">5</span>){
+                        ret.<span class="hljs-built_in">add</span>(<span class="hljs-string">"FizzBuzz"</span>);
+                        fizz=<span class="hljs-number">0</span>;
+                        buzz=<span class="hljs-number">0</span>;
+                    }<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(fizz==<span class="hljs-number">3</span>){
+                        ret.<span class="hljs-built_in">add</span>(<span class="hljs-string">"Fizz"</span>);
+                        fizz=<span class="hljs-number">0</span>;
+                    }<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(buzz==<span class="hljs-number">5</span>){
+                        ret.<span class="hljs-built_in">add</span>(<span class="hljs-string">"Buzz"</span>);
+                        buzz=<span class="hljs-number">0</span>;
+                    }<span class="hljs-keyword">else</span>{
+                        ret.<span class="hljs-built_in">add</span>(<span class="hljs-keyword">String</span>.valueOf(i));
+                    }
+                } 
+                <span class="hljs-keyword">return</span> ret;
+            }
+        }
+        </code>
+        
+    </body>
+</html>
+
+
+
+
