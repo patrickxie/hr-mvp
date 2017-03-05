@@ -1,0 +1,36 @@
+
+https://leetcode.com/problems/valid-number/?tab=Solutions
+body > .content-wrapper > .container > .row > .col-md-12 > #discuss-solution-app .tab-content > data-reactroot #discussSolution > .list-group > .list-group-item        is the nav bar before you can get ot the code, and inside list gorup item are what you are looking for to find the solution int he language you want
+
+body > .content-wrapper > .container > .row > .col-md-12 > #discuss-solution-app .tab-content > .panel panel-default > .panel-body > 1st child div > pre element tag > code element tag
+
+
+pasting into the area
+/html/body/div[1]/div[5]/div[2]/div/div/div/div/div[3]/div/div[3]
+ ace-content > ace_layer ace_text-layer
+
+
+
+need to take the code convert it into ace keyword/ ace parenthesis
+
+
+need a scraper
+need a formatter
+need a converter
+need a paster
+
+need a job runner
+
+
+
+
+the code snippets are separated by \n in between span tags
+
+
+
+gets all the answers from leetcode and saves it into a database
+
+code a bot that can emulate user behavior and paste in python code in a string from our database
+
+build a fullstack app that'll let people make account and give us their login and have bots run on it to fill their leetcode answers.
+can pay if they want to jump the queue
