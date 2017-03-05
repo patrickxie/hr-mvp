@@ -29,8 +29,19 @@ the code snippets are separated by \n in between span tags
 
 
 gets all the answers from leetcode and saves it into a database
+problem, not all solutions in python or language you want will be located on the solutions tab
 
 code a bot that can emulate user behavior and paste in python code in a string from our database
 
 build a fullstack app that'll let people make account and give us their login and have bots run on it to fill their leetcode answers.
 can pay if they want to jump the queue
+
+
+
+
+attempt to use jquery to manipulate the dom
+use python parser to paste into input field
+
+
+
+deal with authentication session expire

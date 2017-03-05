@@ -1,31 +1,12 @@
 
 
 
-for(var i = 100; i > 0 ; i --){
-    if(i % 10 ===0){
-        var nums = numbersToMultiply(i)
-    }
-
-    for(var j=nums[0]; j>nums[1]; j--){
-        let r = i*j
-    }
-}
-
-numbersToMultiply(100);
-100, 90
-
-function numbersToMultiply(currentNum){
-    let tensCounted = (a - currentNum) /10
-    b - tensCounted;
-    let start = 100
-    let end = 100 - tensCounted*10
-    return [start, end]
-}
 
 
-function switch(){
+// numbersToMultiply(100);
+// 100, 90
 
-}
+
 
 
 //for first 10 numbers
@@ -43,8 +24,35 @@ var largestPalindrome = function(n) {
     a = parseInt(a);
     var b = a;
     
+//  var a =100;
+//  var b= 100;
+    function numbersToMultiply(currentNum){
+        // debugger;
+        // if(currentNum)
+        let tensCounted = (a - currentNum) /10
+        b - tensCounted;
+        let start = a
+        let end = b - tensCounted*10 - 10
+        return [start, end]
+    }
+
+    for(var i = a; i > 0 ; i --){
+        // debugger
+        if(i % 10 ===0){
+            var nums = numbersToMultiply(i)
+        }
+
+        for(var j=nums[0]; j>nums[1]; j--){
+            let r = i*j
+            if (r.toString() === r.toString().split('').reverse().join('') ) {
+              console.log('r: %s, i: %s, j: %s', r, i, j)
+              return r % 1337;
+            }
+        }
+    }
+
 
 };
 
 
-console.log(largestPalindrome(2));
+console.log(largestPalindrome(3));
