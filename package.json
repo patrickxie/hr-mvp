@@ -1,0 +1,23 @@
+{
+  "name": "hr-mvp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "largestProductPalindrome.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patrickxie/hr-mvp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/patrickxie/hr-mvp/issues"
+  },
+  "homepage": "https://github.com/patrickxie/hr-mvp#readme",
+  "dependencies": {
+    "base-64": "^0.1.0",
+    "utf8": "^2.1.2"
+  }
+}
