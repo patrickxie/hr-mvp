@@ -1,0 +1,45 @@
+1488765275429	geckodriver	INFO	Listening on 127.0.0.1:64034
+1488765276694	mozprofile::profile	INFO	Using profile path /var/folders/97/30n6ymtd0wz9gr8zdgsps_nr0000gn/T/rust_mozprofile.kGQnQBEXsW8K
+1488765276695	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1488765276737	geckodriver::marionette	INFO	Connecting to Marionette on localhost:64043
+1488765278479	Marionette	INFO	Listening on port 64043
+1488765309757	geckodriver	INFO	Listening on 127.0.0.1:64098
+1488765310853	mozprofile::profile	INFO	Using profile path /var/folders/97/30n6ymtd0wz9gr8zdgsps_nr0000gn/T/rust_mozprofile.ZmPj4ot3FY1e
+1488765310854	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1488765310856	geckodriver::marionette	INFO	Connecting to Marionette on localhost:64107
+1488765311718	Marionette	INFO	Listening on port 64107
+1488765400110	geckodriver	INFO	Listening on 127.0.0.1:64186
+1488765401208	mozprofile::profile	INFO	Using profile path /var/folders/97/30n6ymtd0wz9gr8zdgsps_nr0000gn/T/rust_mozprofile.PsWAZRBZYAXV
+1488765401209	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1488765401212	geckodriver::marionette	INFO	Connecting to Marionette on localhost:64195
+1488765401921	Marionette	INFO	Listening on port 64195
+1488765487159	geckodriver	INFO	Listening on 127.0.0.1:64275
+1488765488256	mozprofile::profile	INFO	Using profile path /var/folders/97/30n6ymtd0wz9gr8zdgsps_nr0000gn/T/rust_mozprofile.jSA1vttGzqRT
+1488765488257	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1488765488260	geckodriver::marionette	INFO	Connecting to Marionette on localhost:64284
+1488765488976	Marionette	INFO	Listening on port 64284
+1488765502859	geckodriver	INFO	Listening on 127.0.0.1:64312
+1488765503953	mozprofile::profile	INFO	Using profile path /var/folders/97/30n6ymtd0wz9gr8zdgsps_nr0000gn/T/rust_mozprofile.L4oy40HxWv70
+1488765503954	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1488765503957	geckodriver::marionette	INFO	Connecting to Marionette on localhost:64321
+1488765504702	Marionette	INFO	Listening on port 64321
+1488765518736	geckodriver	INFO	Listening on 127.0.0.1:64353
+1488765519823	mozprofile::profile	INFO	Using profile path /var/folders/97/30n6ymtd0wz9gr8zdgsps_nr0000gn/T/rust_mozprofile.Gpv7dLDN3ULR
+1488765519824	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1488765519826	geckodriver::marionette	INFO	Connecting to Marionette on localhost:64362
+1488765520482	Marionette	INFO	Listening on port 64362
+1488765532527	geckodriver	INFO	Listening on 127.0.0.1:64390
+1488765533620	mozprofile::profile	INFO	Using profile path /var/folders/97/30n6ymtd0wz9gr8zdgsps_nr0000gn/T/rust_mozprofile.ecPXhmtROTlR
+1488765533621	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1488765533624	geckodriver::marionette	INFO	Connecting to Marionette on localhost:64399
+1488765534334	Marionette	INFO	Listening on port 64399
+1488765546511	geckodriver	INFO	Listening on 127.0.0.1:64430
+1488765547642	mozprofile::profile	INFO	Using profile path /var/folders/97/30n6ymtd0wz9gr8zdgsps_nr0000gn/T/rust_mozprofile.AFgHZrM85iro
+1488765547643	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1488765547646	geckodriver::marionette	INFO	Connecting to Marionette on localhost:64439
+1488765548361	Marionette	INFO	Listening on port 64439
+1488765679514	geckodriver	INFO	Listening on 127.0.0.1:64522
+1488765680598	mozprofile::profile	INFO	Using profile path /var/folders/97/30n6ymtd0wz9gr8zdgsps_nr0000gn/T/rust_mozprofile.ZcfxxLm4KAsQ
+1488765680599	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1488765680602	geckodriver::marionette	INFO	Connecting to Marionette on localhost:64531
+1488765681260	Marionette	INFO	Listening on port 64531
