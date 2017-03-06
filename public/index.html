@@ -22,8 +22,19 @@
         right: 0;
         bottom: 0;
         left: 0;
+        height: 500px;
+    }
+    .button {
+        position: absolute;
+        top: 600px;
+        left: 300px
+        width: 100px;
+        height: 50px;
+        background-color: red;
+
     }
 </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
 </head>
 <body>
 <!--<div><p>HELLO WORLD</p><input type="text" id='editor1'></input></div>
@@ -40,6 +51,7 @@ At w3schools.com you will learn how to make a website. We offer free tutorials i
     var x = "All this is syntax highlighted";
     return x;
 }</div>
+<button class="button"> click here to submit to server </button>
 
 
 <!--<script src="/ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>-->
@@ -51,6 +63,18 @@ At w3schools.com you will learn how to make a website. We offer free tutorials i
         edit.getSession().setMode("ace/mode/javascript");
 
     })()
+
+    $( ".button" ).click(function() {
+    // alert( "Handler for .click() called." );
+      console.log('just clicked button')
+      $.ajax({
+          url: "/clicked", 
+          method: 'GET',
+        //   data: ,
+          success: function(result){
+            $("#div1").html(result);
+          }}) 
+      });
  </script>
 </body>
 </html>

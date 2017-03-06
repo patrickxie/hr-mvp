@@ -185,3 +185,9 @@ Full stack:
 1488777460644	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
 1488777460647	geckodriver::marionette	INFO	Connecting to Marionette on localhost:51546
 1488777461621	Marionette	INFO	Listening on port 51546
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: NetworkError when attempting to fetch resource.
+Full stack: 
+*************************
