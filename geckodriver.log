@@ -43,3 +43,145 @@
 1488765680599	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
 1488765680602	geckodriver::marionette	INFO	Connecting to Marionette on localhost:64531
 1488765681260	Marionette	INFO	Listening on port 64531
+1488774227974	geckodriver	INFO	Listening on 127.0.0.1:49362
+1488774229117	mozprofile::profile	INFO	Using profile path /var/folders/97/30n6ymtd0wz9gr8zdgsps_nr0000gn/T/rust_mozprofile.lL0fBYm40OEx
+1488774229118	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1488774229123	geckodriver::marionette	INFO	Connecting to Marionette on localhost:49371
+1488774230133	Marionette	INFO	Listening on port 49371
+1488774383822	geckodriver	INFO	Listening on 127.0.0.1:49444
+1488774384921	mozprofile::profile	INFO	Using profile path /var/folders/97/30n6ymtd0wz9gr8zdgsps_nr0000gn/T/rust_mozprofile.TzoMAbwaYhbs
+1488774384922	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1488774384925	geckodriver::marionette	INFO	Connecting to Marionette on localhost:49453
+1488774385656	Marionette	INFO	Listening on port 49453
+JavaScript error: https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ace.js, line 1: Error: ace.edit can't find div #editor
+1488774403475	geckodriver	INFO	Listening on 127.0.0.1:49486
+1488774404565	mozprofile::profile	INFO	Using profile path /var/folders/97/30n6ymtd0wz9gr8zdgsps_nr0000gn/T/rust_mozprofile.SPYxWSmhfo1C
+1488774404566	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1488774404569	geckodriver::marionette	INFO	Connecting to Marionette on localhost:49495
+1488774405329	Marionette	INFO	Listening on port 49495
+JavaScript error: https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ace.js, line 1: Error: ace.edit can't find div #editor
+1488774495940	geckodriver	INFO	Listening on 127.0.0.1:49547
+1488774497045	mozprofile::profile	INFO	Using profile path /var/folders/97/30n6ymtd0wz9gr8zdgsps_nr0000gn/T/rust_mozprofile.Iz0jwvMgN4yv
+1488774497046	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1488774497050	geckodriver::marionette	INFO	Connecting to Marionette on localhost:49556
+1488774497891	Marionette	INFO	Listening on port 49556
+JavaScript error: https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ace.js, line 1: Error: ace.edit can't find div #editor
+JavaScript error: https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ace.js, line 1: Error: ace.edit can't find div #editor
+JavaScript error: https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ace.js, line 1: Error: ace.edit can't find div #editor
+1488774592562	geckodriver	INFO	Listening on 127.0.0.1:49617
+1488774593682	mozprofile::profile	INFO	Using profile path /var/folders/97/30n6ymtd0wz9gr8zdgsps_nr0000gn/T/rust_mozprofile.56s7Tl4Xf8IK
+1488774593683	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1488774593686	geckodriver::marionette	INFO	Connecting to Marionette on localhost:49627
+1488774594573	Marionette	INFO	Listening on port 49627
+JavaScript error: https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ace.js, line 1: Error: ace.edit can't find div #editor
+1488774742995	geckodriver	INFO	Listening on 127.0.0.1:49712
+1488774744176	mozprofile::profile	INFO	Using profile path /var/folders/97/30n6ymtd0wz9gr8zdgsps_nr0000gn/T/rust_mozprofile.4a0l8XZJfaNz
+1488774744178	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1488774744184	geckodriver::marionette	INFO	Connecting to Marionette on localhost:49721
+1488774745036	Marionette	INFO	Listening on port 49721
+JavaScript error: https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ace.js, line 1: Error: ace.edit can't find div #editor
+1488774780988	geckodriver	INFO	Listening on 127.0.0.1:49764
+1488774782075	mozprofile::profile	INFO	Using profile path /var/folders/97/30n6ymtd0wz9gr8zdgsps_nr0000gn/T/rust_mozprofile.s3tP4pY4DMjk
+1488774782076	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1488774782078	geckodriver::marionette	INFO	Connecting to Marionette on localhost:49773
+1488774782819	Marionette	INFO	Listening on port 49773
+JavaScript error: https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ace.js, line 1: Error: ace.edit can't find div #editor
+1488774804118	geckodriver	INFO	Listening on 127.0.0.1:49809
+1488774805223	mozprofile::profile	INFO	Using profile path /var/folders/97/30n6ymtd0wz9gr8zdgsps_nr0000gn/T/rust_mozprofile.Tp2rFPz3rt4o
+1488774805224	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1488774805227	geckodriver::marionette	INFO	Connecting to Marionette on localhost:49818
+1488774805967	Marionette	INFO	Listening on port 49818
+JavaScript error: https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ace.js, line 1: Error: ace.edit can't find div #editor
+1488774821142	geckodriver	INFO	Listening on 127.0.0.1:49852
+1488774822230	mozprofile::profile	INFO	Using profile path /var/folders/97/30n6ymtd0wz9gr8zdgsps_nr0000gn/T/rust_mozprofile.w8g7DbX4T6A2
+1488774822231	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1488774822234	geckodriver::marionette	INFO	Connecting to Marionette on localhost:49861
+1488774822876	Marionette	INFO	Listening on port 49861
+JavaScript error: https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ace.js, line 1: Error: ace.edit can't find div #editor
+1488774904067	geckodriver	INFO	Listening on 127.0.0.1:49914
+1488774905173	mozprofile::profile	INFO	Using profile path /var/folders/97/30n6ymtd0wz9gr8zdgsps_nr0000gn/T/rust_mozprofile.wvaqSZl5N537
+1488774905174	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1488774905177	geckodriver::marionette	INFO	Connecting to Marionette on localhost:49923
+1488774906025	Marionette	INFO	Listening on port 49923
+1488774937440	geckodriver	INFO	Listening on 127.0.0.1:49956
+1488774938545	mozprofile::profile	INFO	Using profile path /var/folders/97/30n6ymtd0wz9gr8zdgsps_nr0000gn/T/rust_mozprofile.a3O4E5LS1zUN
+1488774938546	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1488774938550	geckodriver::marionette	INFO	Connecting to Marionette on localhost:49965
+1488774939284	Marionette	INFO	Listening on port 49965
+1488775173957	geckodriver	INFO	Listening on 127.0.0.1:50043
+1488775175066	mozprofile::profile	INFO	Using profile path /var/folders/97/30n6ymtd0wz9gr8zdgsps_nr0000gn/T/rust_mozprofile.PlSX6cUzy6PF
+1488775175067	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1488775175071	geckodriver::marionette	INFO	Connecting to Marionette on localhost:50052
+1488775175856	Marionette	INFO	Listening on port 50052
+1488775377338	geckodriver	INFO	Listening on 127.0.0.1:50321
+1488775378475	mozprofile::profile	INFO	Using profile path /var/folders/97/30n6ymtd0wz9gr8zdgsps_nr0000gn/T/rust_mozprofile.HGbZUuJhvpvc
+1488775378476	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1488775378479	geckodriver::marionette	INFO	Connecting to Marionette on localhost:50330
+1488775379231	Marionette	INFO	Listening on port 50330
+1488775411497	geckodriver	INFO	Listening on 127.0.0.1:50367
+1488775412587	mozprofile::profile	INFO	Using profile path /var/folders/97/30n6ymtd0wz9gr8zdgsps_nr0000gn/T/rust_mozprofile.YKbTAxAWhocm
+1488775412588	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1488775412590	geckodriver::marionette	INFO	Connecting to Marionette on localhost:50376
+1488775413371	Marionette	INFO	Listening on port 50376
+1488775446420	geckodriver	INFO	Listening on 127.0.0.1:50416
+1488775447507	mozprofile::profile	INFO	Using profile path /var/folders/97/30n6ymtd0wz9gr8zdgsps_nr0000gn/T/rust_mozprofile.ecWs5wbBwP1J
+1488775447508	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1488775447511	geckodriver::marionette	INFO	Connecting to Marionette on localhost:50425
+1488775448272	Marionette	INFO	Listening on port 50425
+1488775755003	geckodriver	INFO	Listening on 127.0.0.1:50550
+1488775756100	mozprofile::profile	INFO	Using profile path /var/folders/97/30n6ymtd0wz9gr8zdgsps_nr0000gn/T/rust_mozprofile.JTv5R26XsZDN
+1488775756101	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1488775756104	geckodriver::marionette	INFO	Connecting to Marionette on localhost:50559
+1488775756902	Marionette	INFO	Listening on port 50559
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: NetworkError when attempting to fetch resource.
+Full stack: 
+*************************
+1488776380074	geckodriver	INFO	Listening on 127.0.0.1:50762
+1488776381184	mozprofile::profile	INFO	Using profile path /var/folders/97/30n6ymtd0wz9gr8zdgsps_nr0000gn/T/rust_mozprofile.b2YM2EK4PGFl
+1488776381185	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1488776381190	geckodriver::marionette	INFO	Connecting to Marionette on localhost:50771
+1488776382070	Marionette	INFO	Listening on port 50771
+1488776886493	geckodriver	INFO	Listening on 127.0.0.1:51080
+1488776887621	mozprofile::profile	INFO	Using profile path /var/folders/97/30n6ymtd0wz9gr8zdgsps_nr0000gn/T/rust_mozprofile.jbb6mj3sMbgG
+1488776887622	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1488776887626	geckodriver::marionette	INFO	Connecting to Marionette on localhost:51089
+1488776888548	Marionette	INFO	Listening on port 51089
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: NetworkError when attempting to fetch resource.
+Full stack: 
+*************************
+[Child 63793] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+[Child 63793] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+1488777156553	geckodriver	INFO	Listening on 127.0.0.1:51189
+1488777157679	mozprofile::profile	INFO	Using profile path /var/folders/97/30n6ymtd0wz9gr8zdgsps_nr0000gn/T/rust_mozprofile.vjl5uvuYrPeT
+1488777157680	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1488777157684	geckodriver::marionette	INFO	Connecting to Marionette on localhost:51198
+1488777158552	Marionette	INFO	Listening on port 51198
+1488777164576	Marionette	WARN	Using deprecated data structure for setting timeouts
+1488777214790	geckodriver	INFO	Listening on 127.0.0.1:51242
+1488777215910	mozprofile::profile	INFO	Using profile path /var/folders/97/30n6ymtd0wz9gr8zdgsps_nr0000gn/T/rust_mozprofile.NDJfqx6cmEsF
+1488777215911	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1488777215915	geckodriver::marionette	INFO	Connecting to Marionette on localhost:51251
+1488777216750	Marionette	INFO	Listening on port 51251
+1488777223133	Marionette	WARN	Using deprecated data structure for setting timeouts
+1488777239729	geckodriver	INFO	Listening on 127.0.0.1:51300
+1488777240846	mozprofile::profile	INFO	Using profile path /var/folders/97/30n6ymtd0wz9gr8zdgsps_nr0000gn/T/rust_mozprofile.MZuy2ErHknVt
+1488777240847	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1488777240850	geckodriver::marionette	INFO	Connecting to Marionette on localhost:51309
+1488777241696	Marionette	INFO	Listening on port 51309
+1488777247694	Marionette	WARN	Using deprecated data structure for setting timeouts
+1488777309833	geckodriver	INFO	Listening on 127.0.0.1:51378
+1488777310965	mozprofile::profile	INFO	Using profile path /var/folders/97/30n6ymtd0wz9gr8zdgsps_nr0000gn/T/rust_mozprofile.vb5l7HM2tlBy
+1488777310966	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1488777310969	geckodriver::marionette	INFO	Connecting to Marionette on localhost:51387
+1488777311690	Marionette	INFO	Listening on port 51387
+1488777459514	geckodriver	INFO	Listening on 127.0.0.1:51537
+1488777460643	mozprofile::profile	INFO	Using profile path /var/folders/97/30n6ymtd0wz9gr8zdgsps_nr0000gn/T/rust_mozprofile.wTaqGlCCdL5W
+1488777460644	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1488777460647	geckodriver::marionette	INFO	Connecting to Marionette on localhost:51546
+1488777461621	Marionette	INFO	Listening on port 51546

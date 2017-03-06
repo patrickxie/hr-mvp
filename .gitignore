@@ -1,1 +1,5 @@
 node_modules
+geckodriver.log
+largestProductPalindrome.js
+npm-debug.log
+problemsDatabase.json
