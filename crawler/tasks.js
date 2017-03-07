@@ -27,29 +27,29 @@ const task = (categoryId, problemNamesList, configs) => {
                 if(parsed._imported_slug){
                     let entry = new models.Solutions({
                     urlToGet: solutionsForum,
-                    rawJSON: res,
+                    rawJSON: JSON.stringify(res),
                     isSolution: true
                     })
-                    entry.save(err => console.log('1, DB ERROR: ', err))
+                    entry.save(err => console.error('1, DB ERROR: ', err))
                     return parsed;
                 } else {
                     let entry = new models.Solutions({
                     urlToGet: solutionsForum,
-                    rawJSON: res,
+                    rawJSON: JSON.stringify(res),
                     isSolution: false
                     })
-                    entry.save(err => console.log('2, DB ERROR: ', err))
+                    entry.save(err => console.error('2, DB ERROR: ', err))
                     return parsed;
                 }
             });
         } else {
             //get the json from the model we just queried
-            return data[0].rawJSON
+            return JSON.parse(data[0].rawJSON)
         }
     }, err => err )
     // .then(resp => JSON.stringify(resp))
     .then(resp =>{ 
-        console.log(resp.topics.length) //should be parsed javascript object now
+        // console.log(resp.topics.length) //should be parsed javascript object now
         if(resp._imported_slug){
             return resp.topics.filter(i=> i.title.toLowerCase().indexOf(configs.language) > 0)
                 .map(i=> i.tid)
@@ -59,13 +59,13 @@ const task = (categoryId, problemNamesList, configs) => {
         }
     }, err=> err) 
     // .then( result => console.log('1', result), err => console.log('2', err) )
-    .then( toFetch => toFetch.map((i)=> request.get(topicBaseUrl+i)))
-    // .then( d =>  d, console.log(d))
+    // .then( toFetch => toFetch.map((i)=> request.get(topicBaseUrl+i)))  //currently disabled to prevent api overflow
     .then( allRequests => Promise.all(allRequests))
-    // .then( results => console.log(results));
+    .then( results => console.log(results));
     // got RawJSON, filter topics by having keyword "python" using .filter  and indexOf
     // filter texts by <code>
     // find corresponding model, save into the answers array
+    //just call the _imported_content, and you're good, straight up formatted, if you just extract it from the code
     
 
 }
