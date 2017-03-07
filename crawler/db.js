@@ -14,7 +14,9 @@ db.once('open', function() {
 var solutionsSchema = mongoose.Schema({
     urlToGet: String,
     rawJSON: String,
-    answers: Array
+    isSolution: Boolean,
+    topicsPython: Array,
+    answersPython: Array
 });
 
 const Solutions = mongoose.model('Solutions', solutionsSchema);

@@ -4,11 +4,13 @@ const { helpers } = require('./util.js')
 const { runTask } = require('./tasks.js')
 
 const configs = {
-    wait: () => Math.ceil(Math.random()*30)
+    wait: () => Math.ceil(Math.random()*30),
+    language: 'python'
 }
 
 const main = (start, end) => {
-
+    // debugger;
+    // I THINK WE NEED TO CONVERT ALL OF THESE TO PROMISES OR ELSE IT WON TEVER LOOP OR END
     names
     .then( data => {
         for(let i = start ; i < end; i++){
