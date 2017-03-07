@@ -13,13 +13,23 @@ const scrubUrl = ( document, startIndex) => {
         count--, i++;
     }
     return final
-    //make sure you LOG this fucking url cause your method is ghetto as shit
+    //make sure you LOG this url 
 }
+
+//TODO: still need to write functionality to check html document for <div class="hljs"> to guarantee the end of the code
+// can check the first few words after the last hljs match the one we have in json, then slice those off
+const getCodeAnswerFromEntirePostText = ( prefix, document ) => {
+    let start = document.indexOf(prefix)
+    let r = document.slice(start)
+    return r
+}
+
 
 
 const helpers = {
     getX : numSitesToVisit,
     getXReverse: reverseSitesToVisit,
-    getDiscussionUrl: scrubUrl
+    getDiscussionUrl: scrubUrl,
+    pluckAnswer: getCodeAnswerFromEntirePostText
 }
 module.exports.helpers = helpers;

@@ -13,6 +13,7 @@ db.once('open', function() {
 
 var solutionsSchema = mongoose.Schema({
     urlToGet: String,
+    slug: String,
     rawJSON: String,
     isSolution: Boolean,
     topicsPython: Array,

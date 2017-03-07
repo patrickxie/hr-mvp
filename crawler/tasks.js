@@ -59,11 +59,24 @@ const task = (categoryId, problemNamesList, configs) => {
         }
     }, err=> err) 
     // .then( result => console.log('1', result), err => console.log('2', err) )
-    // .then( toFetch => toFetch.map((i)=> request.get(topicBaseUrl+i)))  //currently disabled to prevent api overflow
-    .then( allRequests => Promise.all(allRequests))
-    .then( results => console.log(results));
-    // got RawJSON, filter topics by having keyword "python" using .filter  and indexOf
-    // filter texts by <code>
+    // .then( toFetch => toFetch.map((i)=> request.get(topicBaseUrl+i)))   //uncomment during production
+    // .then( allRequests => Promise.all(allRequests))  //uncomment during production
+    // .then( results => results.map(i => i.data._imported_content)) //uncomment during production
+    .then( results => gib )
+    // .then( r => console.log('final: ', r))
+    // .then( results => console.log('final ', results));
+    .then( listOfTexts => {
+        let r = listOfTexts.map(i => helpers.pluckAnswer(configs.pythonPrefix, i))
+        return r
+    })
+    .then( r => console.log('final: ', r))
+    // filter texts by class Solution:
+    // corresponding model is urlToGet, pick it out from the database,
+    //  models.Solutions({
+    //      urlToGet: solutionsForum,
+    //  })
+     // query above data
+     // then solution.answersPython = [ ... r ]
     // find corresponding model, save into the answers array
     //just call the _imported_content, and you're good, straight up formatted, if you just extract it from the code
     
@@ -87,3 +100,9 @@ module.exports.runTask = task
         
 //     })
 // }
+
+
+const gib = [ `    class Solution(object):\n        def twoSum(self, nums, target):\n            """\n            :type nums: List[int]\n
+         :type target: int\n            :rtype: List[int]\n            """\n            if len(nums) <= 1:\n                return False
+\n            buff_dict = {}\n            for i in range(len(nums)):\n                if nums[i] in buff_dict:\n                    retu
+rn [buff_dict[nums[i]], i+1]\n                else:\n                    buff_dict[target - nums[i]] = i+1` ]

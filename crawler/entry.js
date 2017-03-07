@@ -5,7 +5,8 @@ const { runTask } = require('./tasks.js')
 
 const configs = {
     wait: () => Math.ceil(Math.random()*30),
-    language: 'python'
+    language: 'python',
+    pythonPrefix: 'class Solution'
 }
 
 const main = (start, end) => {
