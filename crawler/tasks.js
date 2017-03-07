@@ -1,7 +1,7 @@
 const request = require('axios')
 // const cheerio = require('cheerio')
 const { helpers } = require('./util.js')
-const { db, models } = require('./db.js')
+const { db, mongo, models } = require('./db.js')
 
 
 const task = (categoryId, problemNamesList, configs) => {
@@ -48,6 +48,9 @@ const task = (categoryId, problemNamesList, configs) => {
                 }
             });
         } else {
+            slugName = data._imported_slug
+            rawJson = data.rawJSON
+            isSolu = data.isSolution
             //get the json from the model we just queried
             return JSON.parse(data[0].rawJSON)
         }
@@ -79,18 +82,29 @@ const task = (categoryId, problemNamesList, configs) => {
             if(result === null) throw `it shouldn't happen here`
             result.slug = slugName
             result.rawJSON = rawJson
-            result.
+            result.isSoution = isSolu
+            result.topicsPython = topicList
+            result.answersPython = [ ...toSave, ...result.answersPython ]
+            // console.log(result.topicsPython)
+            console.log(result.answersPython)
+            return result.save(( err, good )=> {
+                if (err) console.log('saving answers error: ', err)
+                console.log('final chain: saved good ')
+            }).then(function(){
+                mongo.disconnect()
+            })
         })
-        let fullResult = new models.Solutions({
-            urlToGet: solutionsForum,
-            slug: slugName,
-            rawJSON: rawJson,
-            isSolution: isSolu,
-            topicsPython: topicList,
-            answersPython: toSave
-        })
+        // let fullResult = new models.Solutions({
+        //     urlToGet: solutionsForum,
+        //     slug: slugName,
+        //     rawJSON: rawJson,
+        //     isSolution: isSolu,
+        //     topicsPython: topicList,
+        //     answersPython: toSave
+        // })
+        // return
     })
-    // .then( r => console.log('final: ', r))
+    // .then( r => console.log('final: ', r), err => console.log('final err: ', err))
 
     // filter texts by class Solution:
     // corresponding model is urlToGet, pick it out from the database,
@@ -100,7 +114,6 @@ const task = (categoryId, problemNamesList, configs) => {
      // query above data
      // then solution.answersPython = [ ... r ]
     // find corresponding model, save into the answers array
-    //just call the _imported_content, and you're good, straight up formatted, if you just extract it from the code
     
 
 }
