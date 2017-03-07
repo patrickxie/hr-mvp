@@ -12,6 +12,7 @@ const task = (categoryId, problemNamesList, configs) => {
 
     const topicBaseUrl = `https://discuss.leetcode.com/api/topic/`
 
+    let slugName, rawJson, isSolu, topicList;
     // const test = `https://discuss.leetcode.com/api/category/1`
     // console.log(solutionsForum)
     let check = new models.Solutions({ urlToGet: solutionsForum })
@@ -26,17 +27,21 @@ const task = (categoryId, problemNamesList, configs) => {
                 let parsed = res
                 if(parsed._imported_slug){
                     let entry = new models.Solutions({
-                    urlToGet: solutionsForum,
-                    rawJSON: JSON.stringify(res),
-                    isSolution: true
+                        urlToGet: solutionsForum,
+                        slug: res._imported_slug,
+                        rawJSON: JSON.stringify(res),
+                        isSolution: true
                     })
+                    slugName = res._imported_slug
+                    rawJson = JSON.stringify(res)
+                    isSolu = true
                     entry.save(err => console.error('1, DB ERROR: ', err))
                     return parsed;
                 } else {
                     let entry = new models.Solutions({
-                    urlToGet: solutionsForum,
-                    rawJSON: JSON.stringify(res),
-                    isSolution: false
+                        urlToGet: solutionsForum,
+                        rawJSON: JSON.stringify(res),
+                        isSolution: false
                     })
                     entry.save(err => console.error('2, DB ERROR: ', err))
                     return parsed;
@@ -51,6 +56,7 @@ const task = (categoryId, problemNamesList, configs) => {
     .then(resp =>{ 
         // console.log(resp.topics.length) //should be parsed javascript object now
         if(resp._imported_slug){
+            topicList = resp.topics
             return resp.topics.filter(i=> i.title.toLowerCase().indexOf(configs.language) > 0)
                 .map(i=> i.tid)
         } else {    
@@ -66,10 +72,26 @@ const task = (categoryId, problemNamesList, configs) => {
     // .then( r => console.log('final: ', r))
     // .then( results => console.log('final ', results));
     .then( listOfTexts => {
-        let r = listOfTexts.map(i => helpers.pluckAnswer(configs.pythonPrefix, i))
-        return r
+        return listOfTexts.map(i => helpers.pluckAnswer(configs.pythonPrefix, i))
     })
-    .then( r => console.log('final: ', r))
+    .then( toSave => {
+        models.Solutions.findOne({ urlToGet: solutionsForum}, function(err, result){
+            if(result === null) throw `it shouldn't happen here`
+            result.slug = slugName
+            result.rawJSON = rawJson
+            result.
+        })
+        let fullResult = new models.Solutions({
+            urlToGet: solutionsForum,
+            slug: slugName,
+            rawJSON: rawJson,
+            isSolution: isSolu,
+            topicsPython: topicList,
+            answersPython: toSave
+        })
+    })
+    // .then( r => console.log('final: ', r))
+
     // filter texts by class Solution:
     // corresponding model is urlToGet, pick it out from the database,
     //  models.Solutions({
