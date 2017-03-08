@@ -34,13 +34,8 @@ const login = () => {
             user.sendKeys('hrmvp123')
             pass.sendKeys('hrmvp321')
             button.click()
-            // console.log(bu);
-            // console.log(button)
-            console.log('done loginnin')
-            // return driver
+            return 'Yes'
         })
-        // return 'doneloggedin'
-    // })
 }
 
 
@@ -49,23 +44,34 @@ const getAnswer = () => {
     return models.Solutions.findOne({ urlToGet: solution },
         function(err, result){
             if(err) console.log('what is our error: ', err)
-            // console.log('our db query items url is : ', result)
             const submitAnswer = result.answersPython[0]
-            console.log('got our database answer: ', submitAnswer)
+            // console.log('got our database answer: ', submitAnswer)
             return submitAnswer
     })
 }
 
 
-Promise.join(getAnswer(), login()).then( (data, isLogIn) => {
-    console.log('our data is: ', data);
-    console.log('weve successfull logged in', isLogIn) 
-    return data
+Promise.join(getAnswer(), login()).then( (data) => {
+    // console.log('our data is: ', data[0]);
+    console.log('weve successfull logged in: ', data[1]) 
+    return data[0]
 }) //before continuing on, check if it's loggedin to see if sess expired
-.then( data => {
+.then( toPaste => {
     console.log('we are executing solutions url')
-    driver.get(SOLUTIONS_URL)    
-    // let button = driver.findElement(By.xpath('/html/body/div/div[2]/form/div[3]/button'))
+    driver.get(SOLUTIONS_URL)
+    .then(()=>{
+        let path = '/html/body/div[1]/div[5]/div[1]/div/select/option[3]'
+        let button = driver.findElement(By.xpath(path))
+        button.click()
+    })
+    .then(()=>{
+        let ele = driver.findElement(By.className('ace_text-input'))
+        ncp.copy(toPaste.answersPython[0], function () {
+            ele.sendKeys(Key.COMMAND, 'a', Key.DELETE)
+            ele.sendKeys(Key.COMMAND, 'v')    
+        })      
+    })    
+
 }, err => err)
 .catch(err => console.log(err))
 // .then( data => {
