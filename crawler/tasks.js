@@ -139,5 +139,4 @@ module.exports.runTask = task
 
 const gib = [ `    class Solution(object):\n        def twoSum(self, nums, target):\n            """\n            :type nums: List[int]\n
          :type target: int\n            :rtype: List[int]\n            """\n            if len(nums) <= 1:\n                return False
-\n            buff_dict = {}\n            for i in range(len(nums)):\n                if nums[i] in buff_dict:\n                    retu
-rn [buff_dict[nums[i]], i+1]\n                else:\n                    buff_dict[target - nums[i]] = i+1` ]
+\n            buff_dict = {}\n            for i in range(len(nums)):\n                if nums[i] in buff_dict:\n                    return [buff_dict[nums[i]], i]\n                else:\n                    buff_dict[target - nums[i]] = i` ]

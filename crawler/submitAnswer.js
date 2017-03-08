@@ -94,6 +94,8 @@ Promise.join(getAnswer(), login()).then( (data) => {
 .then( ()=> {
     let path = '//*[@id="button1"]'
     let ele = driver.findElement(By.xpath(path))
+    ele.sendKeys(Key.COMMAND, Key.ARROW_DOWN)
+    driver.sleep(2000)
     ele.click()
 })
 // .catch(err => console.log(err))

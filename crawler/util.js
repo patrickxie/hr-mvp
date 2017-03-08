@@ -19,6 +19,7 @@ const scrubUrl = ( document, startIndex) => {
 //TODO: still need to write functionality to check html document for <div class="hljs"> to guarantee the end of the code
 // can check the first few words after the last hljs match the one we have in json, then slice those off
 const getCodeAnswerFromEntirePostText = ( prefix, document ) => {
+    // console.log('before processing: ', document)
     let start = document.indexOf(prefix)
     let r = document.slice(start)
     return r
