@@ -25,7 +25,9 @@ const LOGIN_URL = BASE_URL + '/accounts/login/'
 // {/*<button class="btn btn-primary" type="submit">Sign In</button>*/}
 const login = () => {
     // return new Promise(function(resolve, reject){
-    return driver.get(LOGIN_URL).then(()=> {
+    let Cookies;
+    return driver.get(LOGIN_URL)
+        .then(()=> {
             let user = driver.findElement(By.id('id_login'))
             let pass = driver.findElement(By.id('id_password'))
             let bu = driver.findElement(By.className('btn btn-primary'))
@@ -36,6 +38,18 @@ const login = () => {
             button.click()
             return 'Yes'
         })
+        .then(()=> driver.sleep(4000))
+        .then(()=> 
+            driver.manage().getCookies()
+                .then((cookies)=>{
+            // console.log('do we have cookies: ', cookies)
+                Cookies = cookies.filter(i=>i.name==='LEETCODE_SESSION')[0]
+                console.log('ADDING COOKIE: ', Cookies);
+                return driver.manage()
+        }))
+        // .then(()=> driver.manage().addCookie(Cookies))
+        .then(()=> driver.navigate().to(SOLUTIONS_URL))
+        // .then((cookies) => console.log(cookiesls))
 }
 
 
@@ -70,28 +84,20 @@ Promise.join(getAnswer(), login()).then( (data) => {
             ele.sendKeys(Key.COMMAND, 'a', Key.DELETE)
             ele.sendKeys(Key.COMMAND, 'v')    
         })      
+    })
+    .then(()=>{
+        // let ele = 
     })    
 
 }, err => err)
-.catch(err => console.log(err))
+.then( ()=> driver.sleep(3000))
+.then( ()=> {
+    let path = '//*[@id="button1"]'
+    let ele = driver.findElement(By.xpath(path))
+    ele.click()
+})
+// .catch(err => console.log(err))
 // .then( data => {
-
-// }, err => err)
-    // var a = submitAnswer.split('\n');
-    // console.log('a: ', a)
-
-
-    // driver.get(SOLUTIONS_URL);
-    // driver.get(local)
-    // var x = driver.findElement(By.className('ace_text-input'))
-
-    // ncp.copy(submitAnswer, function () {
-    // // complete...
-
-    //     x.sendKeys(Key.COMMAND, 'a', Key.DELETE)
-    //     x.sendKeys(Key.COMMAND, 'v')    
-    // })
-
 
     // driver.findElement(webdriver.By.css('#mySelection > option:nth-child(3)')) //change this to the corresponding python one
     // .click();
