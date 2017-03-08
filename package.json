@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/patrickxie/hr-mvp#readme",
   "dependencies": {
+    "@3846masa/axios-cookiejar-support": "0.0.3",
     "axios": "^0.15.3",
     "base-64": "^0.1.0",
     "cheerio": "^0.22.0",
