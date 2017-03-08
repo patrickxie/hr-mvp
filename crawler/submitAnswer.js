@@ -1,4 +1,5 @@
 const { db, mongo, models } = require('./db.js')
+var Promise = require("bluebird");
 var ncp = require("copy-paste");
 
 
@@ -15,22 +16,67 @@ var driver = new webdriver.Builder()
 
 
 const solution = "https://discuss.leetcode.com/api/category/9"
-const url = 'https://leetcode.com/problems/two-sum/?tab=Solutions'
+const SOLUTIONS_URL = 'https://leetcode.com/problems/two-sum/?tab=Solutions'
 const local = 'http://localhost:8000/'
+const BASE_URL = 'https://leetcode.com'
+const LOGIN_URL = BASE_URL + '/accounts/login/'
 
-// console.log('db: ', db)
-console.log('mongo: ', models.Solutions)
 
-models.Solutions.findOne({ urlToGet: solution }, function(err, result){
-    console.log('what is our error: ', err)
-    console.log('our db query items url is : ', result)
-    const submitAnswer = result.answersPython[0]
+// {/*<button class="btn btn-primary" type="submit">Sign In</button>*/}
+const login = () => {
+    // return new Promise(function(resolve, reject){
+    return driver.get(LOGIN_URL).then(()=> {
+            let user = driver.findElement(By.id('id_login'))
+            let pass = driver.findElement(By.id('id_password'))
+            let bu = driver.findElement(By.className('btn btn-primary'))
+            let button = driver.findElement(By.xpath('/html/body/div/div[2]/form/div[3]/button'))
+            
+            user.sendKeys('hrmvp123')
+            pass.sendKeys('hrmvp321')
+            button.click()
+            // console.log(bu);
+            // console.log(button)
+            console.log('done loginnin')
+            // return driver
+        })
+        // return 'doneloggedin'
+    // })
+}
 
-    var a = submitAnswer.split('\n');
-    console.log('a: ', a)
 
-    // driver.get(url);
-    driver.get(local)
+
+const getAnswer = () => { 
+    return models.Solutions.findOne({ urlToGet: solution },
+        function(err, result){
+            if(err) console.log('what is our error: ', err)
+            // console.log('our db query items url is : ', result)
+            const submitAnswer = result.answersPython[0]
+            console.log('got our database answer: ', submitAnswer)
+            return submitAnswer
+    })
+}
+
+
+Promise.join(getAnswer(), login()).then( (data, isLogIn) => {
+    console.log('our data is: ', data);
+    console.log('weve successfull logged in', isLogIn) 
+    return data
+}) //before continuing on, check if it's loggedin to see if sess expired
+.then( data => {
+    console.log('we are executing solutions url')
+    driver.get(SOLUTIONS_URL)    
+    // let button = driver.findElement(By.xpath('/html/body/div/div[2]/form/div[3]/button'))
+}, err => err)
+.catch(err => console.log(err))
+// .then( data => {
+
+// }, err => err)
+    // var a = submitAnswer.split('\n');
+    // console.log('a: ', a)
+
+
+    // driver.get(SOLUTIONS_URL);
+    // driver.get(local)
     // var x = driver.findElement(By.className('ace_text-input'))
 
     // ncp.copy(submitAnswer, function () {
@@ -40,43 +86,11 @@ models.Solutions.findOne({ urlToGet: solution }, function(err, result){
     //     x.sendKeys(Key.COMMAND, 'v')    
     // })
 
-    // var w = driver.findElement(By.className('selections'))
-    // w.click()
-    // var y = driver.findElement(By.css("option[value='3']"))
 
-    driver.findElement(webdriver.By.css('#mySelection > option:nth-child(3)'))
-    .click();
-    // y.click();
-    // driver.selectOption = selectOption.bind(driver);
-    // driver.selectOption(w, 'opel');
+    // driver.findElement(webdriver.By.css('#mySelection > option:nth-child(3)')) //change this to the corresponding python one
+    // .click();
 
 
-    // function selectOption(selector, item){
-    //     var selectList, desiredOption;
-
-    //     selectList = this.findElement(selector);
-    //     selectList.click();
-
-    //     selectList.findElements(protractor.By.tagName('option'))
-    //         .then(function findMatchingOption(options){
-    //             options.some(function(option){
-    //                 option.getText().then(function doesOptionMatch(text){
-    //                     if (item === text){
-    //                         desiredOption = option;
-    //                         return true;
-    //                     }
-    //                 });
-    //             });
-    //         })
-    //         .then(function clickOption(){
-    //             if (desiredOption){
-    //                 desiredOption.click();
-    //             }
-    //         });
-    // }
-    // driver.findElement(By.className('button')).click();
-
-})
 
 // driver.wait(until.titleIs('webdriver - Google Search'), 1000);
 // driver.quit();
