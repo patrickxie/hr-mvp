@@ -53,3 +53,31 @@ paste into web, hit submit
 
 
 GRAB CODE from http://discuss.leetcode.com/api/topic 23004  and http://discuss.leetcode.com/topic/23004   and verify the end of the hljs class doms to get the ending of the code snipppet
+
+
+
+select the dropdown menu to python
+authenticate
+click submit button
+
+
+
+
+demo
+
+make a new database
+grab answers 9 to 11
+edit entry page to 9, 11 in parameter
+
+then run submitAnswer
+
+<span class="select2-selection__rendered" id="select2-lang-mr-container" title="Python">Python</span>
+
+
+navigate to <select class="form-control select mbm ng-valid select2-hidden-accessible ng-animate ng-pristine-remove ng-pristine-remove-active ng-dirty" name="lang" ng-model="aceCtrl.selectedLang" ng-options="lang.text for lang in aceCtrl.langs track by lang.value" tabindex="-1" aria-hidden="true" style=""><option value="cpp">C++</option><option value="java">Java</option><option value="python">Python</option><option value="c">C</option><option value="csharp">C#</option><option value="javascript">JavaScript</option><option value="ruby">Ruby</option><option value="swift">Swift</option><option value="golang">Go</option></select>
+
+click the option
+
+
+
+<button id="button1" ng-show="!aceCtrl.interpret.interpretOnly" ng-disabled="aceCtrl.interpret.running" class="btn btn-primary btn-pad ng-isolate-scope" type="submit" ng-click="aceCtrl.interpret.submitCode()" oj-button="submit" data-toggle="tooltip" title="" data-original-title="Shortcut: Command + enter">Submit Solution</button>

@@ -48,9 +48,9 @@ const task = (categoryId, problemNamesList, configs) => {
                 }
             });
         } else {
-            slugName = data._imported_slug
-            rawJson = data.rawJSON
-            isSolu = data.isSolution
+            slugName = data[0]._imported_slug
+            rawJson = data[0].rawJSON
+            isSolu = data[0].isSolution
             //get the json from the model we just queried
             return JSON.parse(data[0].rawJSON)
         }
